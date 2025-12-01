@@ -1,10 +1,10 @@
-TwoPoint Loading Screen - Staff Avatars
+Staff Avatars
 
 Place your staff character images in this folder and reference them in html/script.js.
 
 Example:
-  html/staff/jane.png
-  html/staff/bob.jpg
+  html/staff/alex.png
+  html/staff/sam.jpg
 
 In html/script.js, set:
 
@@ -12,17 +12,17 @@ In html/script.js, set:
 
   const staffMembers = [
     {
-      name: "Jane Doe",
-      role: "Community Manager",
-      description: "Handles support & questions.",
-      image: "staff/jane.png"
+      name: "Alex",
+      role: "Owner",
+      description: "Main contact for server issues.",
+      image: "staff/alex.png"
     },
     {
-      name: "Bob Smith",
+      name: "Sam",
       role: "Staff Lead",
-      description: "Contact for staff-related issues.",
-      image: "staff/bob.jpg"
+      description: "Handles staff apps & reports.",
+      image: "staff/sam.jpg"
     }
   ];
 
-Images are loaded relative to the html folder, so use paths like 'staff/jane.png'.
+Images are loaded relative to the html folder, so use paths like 'staff/alex.png'.

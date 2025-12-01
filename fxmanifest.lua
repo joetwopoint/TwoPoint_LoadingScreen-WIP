@@ -2,9 +2,9 @@ fx_version 'cerulean'
 game 'gta5'
 
 name 'twopoint-loadingscreen'
-description 'TwoPoint Development loading screen with random TikTok / YouTube Shorts, watermark logos, Samsung-style phone frame, optional staff list, and source config.'
+description 'Customizable loading screen with random TikTok / YouTube shorts, optional staff list, and phone-style frame.'
 author 'TwoPoint Development'
-version '3.6.0'
+version '4.0.0'
 
 loadscreen 'html/index.html'
 
@@ -13,6 +13,5 @@ files {
     'html/style.css',
     'html/script.js',
     'html/logo.png',
-    'html/twopoint_logo.png',
     'html/staff/*'
 }

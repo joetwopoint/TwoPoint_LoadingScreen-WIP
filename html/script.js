@@ -1,8 +1,4 @@
-// TwoPoint Loading Screen Logic
-// - Random TikTok / YouTube shorts
-// - Optional staff list in the middle column
-// - Arrow key volume for YouTube embeds only
-// - Rotating tips on the left panel
+// Loading screen logic for shorts + staff + tips
 
 // ===================== CONFIG =========================
 
@@ -24,14 +20,14 @@ const staffMembers = [
 //   "tt"   -> TikTok only
 //   "yt"   -> YouTube only
 //   "both" -> TikTok + YouTube
-const SHORT_SOURCE = "both";
+const SHORT_SOURCE = "tt";
 
 // NOTE ABOUT VOLUME:
 // Up/Down arrow keys only affect the volume/mute state of YouTube embeds.
 // TikTok iframes do not expose volume to us, so arrows will NOT change TikTok audio.
 // Clips start at 20% logical volume (YouTube: unmuted).
 
-// TikTok links
+// TikTok links (pre-filled with Sun Valley Roleplay account)
 const tikTokUrls = [
   "https://www.tiktok.com/@sunvalleyroleplay2/video/7565518128927591711",
   "https://www.tiktok.com/@sunvalleyroleplay2/video/7577016794569788702",

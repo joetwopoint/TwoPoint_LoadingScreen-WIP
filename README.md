@@ -4,7 +4,7 @@ Customizable FiveM Loading Screen
 A clean, modern FiveM loading screen that you can brand for **any server**. Features:
 
 - Plays **random TikTok / YouTube Shorts** clips from your own links  
-- Shows a **Samsung-style phone frame** with the shorts inside  
+- Shows a **phone-style frame** with the shorts inside  
 - Has a big **background logo watermark** (customizable)  
 - Optional **staff list** with round character pictures  
 - Shows **server tips** while the player loads  
@@ -53,7 +53,7 @@ twopoint-loadingscreen/
 
 - Replace `html/logo.png` with your **server logo** (same filename).
 
-No corner dev logo is used in this version.
+No dev/brand corner logo is used in this version.
 
 ---
 
@@ -264,65 +264,13 @@ There is **no mention of keybinds** on the screen; arrow keys are a hidden “po
     - Name, role, small description  
 
 - **Right Column**
-  - “Random short from our socials” title
-  - Samsung-style phone frame:
+  - “Random shorts from our socials” title
+  - Phone-style frame:
     - Curved device border, top speaker and camera dot
     - Shorts iframe inside as the screen
   - Volume readout + note about clips possibly starting muted / needing click
 
 Everything is skinned via CSS, so you can tweak colors, radiuses, shadows, etc., in `style.css`.
-
----
-
-## 5. Troubleshooting
-
-**1. Loadscreen not showing / stuck on default FiveM screen**
-
-- Make sure `fxmanifest.lua` is in `twopoint-loadingscreen` root.
-- Ensure this line exists and points to `html/index.html`:
-
-  ```lua
-  loadscreen 'html/index.html'
-  ```
-
-- Check `server.cfg`:
-
-  ```cfg
-  ensure twopoint-loadingscreen
-  ```
-
----
-
-**2. Blank iframe / no video**
-
-- Double-check your TikTok/YouTube URLs by opening them in a normal browser.
-- If using YouTube, make sure the links are valid and not region-blocked.
-- Some browser or CFX changes can affect embeds; testing with multiple links is recommended.
-
----
-
-**3. Staff column not showing**
-
-- Confirm:
-
-  ```js
-  const STAFF_ENABLED = true;
-  ```
-
-- Confirm `staffMembers` has at least one entry.
-- Confirm each `image` path is correct and the file exists in `html/staff/`.
-- On narrower resolutions, the staff panel is automatically hidden to keep layout clean.
-
----
-
-**4. No sound**
-
-- This is normal behavior for many embeds:
-  - TikTok and YouTube often start **muted** or require a click due to browser policies.
-- For YouTube:
-  - `volumePercent` > 0 means we tell YouTube “unmuted,” but the player may still require one click.
-- For TikTok:
-  - There is no programmatic volume control; players may need to click the video.
 
 ---
 
