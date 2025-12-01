@@ -10,6 +10,11 @@
   <div class="background"></div>
   <div class="overlay"></div>
 
+  <!-- Large transparent Sun Valley logo watermark -->
+  <div class="background-logo">
+    <img src="logo.png" alt="Sun Valley Roleplay Logo" />
+  </div>
+
   <div class="wrapper">
     <div class="left-panel">
       <div class="logo-block">
@@ -27,7 +32,7 @@
       </div>
       <div class="small-text">
         Please wait while we load the city.<br />
-        Videos are pulled live from TikTok.
+        Shorts are pulled live from TikTok / YouTube.
       </div>
 
       <div class="tips-title">Server Tips</div>
@@ -36,23 +41,38 @@
       </div>
     </div>
 
+    <!-- Optional staff panel (middle column). Controlled by STAFF_ENABLED in script.js -->
+    <div class="staff-panel" id="staffPanel">
+      <div class="staff-title">Staff Team</div>
+      <div class="staff-list" id="staffList">
+        <!-- Filled by script.js if STAFF_ENABLED is true -->
+      </div>
+    </div>
+
     <div class="right-panel">
-      <div class="video-title">Random clip from our TikTok</div>
+      <div class="video-title">Random short from our socials</div>
+
       <div class="video-wrapper">
-        <iframe
-          id="tiktokFrame"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          scrolling="no"
-        ></iframe>
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <iframe
+              id="shortFrame"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              scrolling="no"
+            ></iframe>
+          </div>
+        </div>
       </div>
 
-      <div class="unmute-hint">Press <strong>SPACEBAR</strong> to (re)start the video / try to unmute.</div>
+      <div class="controls-hint">
+        <span class="volume-readout">Volume: <span id="volumeValue">20%</span></span>
+      </div>
 
       <div class="video-note">
-        Content from <strong>tiktok.com/@sunvalleyroleplay2</strong><br />
+        Content from <strong>TikTok / YouTube</strong><br />
         <span class="video-note-small">
-          Audio autoplay is controlled by TikTok &amp; browser/game settings. You may still need to click the video once.
+          Some clips may start muted or require clicking the video to enable audio.
         </span>
       </div>
     </div>
